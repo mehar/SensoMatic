@@ -1,0 +1,26 @@
+manifest-version: 1.0
+ 
+info:
+  name: SensoMatic
+  description: "Displays randomly generated sensor values"
+  version: "0.1"
+  author-link: "1ttp://www.cisco.com"
+  author-name: "Cisco Systems"
+ 
+app:
+  # Indicate app type (vm, paas, lxc etc.,)
+  apptype: paas
+ 
+  resources:
+    cpu: 100
+    memory: 10
+    disk: 10
+
+  network:
+    ports: [9000]
+    
+  # Specify runtime and startup
+  startup:
+    runtime: python
+    runtime-version: 2.7 
+    target: main.py
